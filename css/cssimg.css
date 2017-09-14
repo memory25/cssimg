@@ -16,6 +16,12 @@ body {
   position: absolute;
 }
 
+
+.container {
+  padding: 10px 350px 0 350px;
+}
+
+
 /* line 11, ../sass/cssimg.sass */
 .wrap {
   padding: 50px;
