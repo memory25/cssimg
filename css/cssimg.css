@@ -1,0 +1,395 @@
+@charset "UTF-8";
+/* line 2, ../sass/cssimg.sass */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 5, ../sass/cssimg.sass */
+body {
+  background: #c6c4c5;
+}
+
+/* line 7, ../sass/cssimg.sass */
+::before, ::after {
+  content: "";
+  position: absolute;
+}
+
+/* line 11, ../sass/cssimg.sass */
+.wrap {
+  padding: 50px;
+  margin-top: 3px;
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  background: #35a3cc;
+}
+
+/* line 19, ../sass/cssimg.sass */
+h4 {
+  position: absolute;
+  left: 10%;
+  z-index: 10;
+  width: 150px;
+}
+
+/*愛心 */
+/* line 25, ../sass/cssimg.sass */
+.love {
+  margin: 25px;
+  width: 50px;
+  height: 50px;
+  background: #ed4747;
+  transform: rotate(45deg);
+}
+/* line 31, ../sass/cssimg.sass */
+.love::before, .love::after {
+  width: 55px;
+  height: 55px;
+  background: #ed4747;
+  border-radius: 100%;
+}
+/* line 36, ../sass/cssimg.sass */
+.love::before {
+  transform: rotate(-45deg) translate(40%, -50%);
+}
+/* line 38, ../sass/cssimg.sass */
+.love::after {
+  transform: rotate(-45deg) translate(-40%, -50%);
+}
+
+/*愛心 */
+/*摺痕 */
+/* line 44, ../sass/cssimg.sass */
+.corner {
+  position: relative;
+  width: 0px;
+  height: 0px;
+  border: solid;
+  border-width: 50px;
+  border-color: transparent #019aed #019aed transparent;
+  box-sizing: border-box;
+}
+/* line 52, ../sass/cssimg.sass */
+.corner::before {
+  width: 40px;
+  height: 0px;
+  border: solid;
+  border-width: 0px 51px 50px 51px;
+  border-color: transparent transparent #019aed transparent;
+  transform: rotate(-45deg) translate(-34px, -92px);
+}
+/* line 59, ../sass/cssimg.sass */
+.corner::after {
+  width: 0;
+  height: 0;
+  border: solid;
+  border-width: 14.1px;
+  border-color: #017bed transparent transparent #017bed;
+  transform: translate(-50px, -49px) rotate(180deg);
+}
+
+/*摺痕 */
+/*波浪背景 */
+/* line 69, ../sass/cssimg.sass */
+.wavebg {
+  border-radius: 10%;
+  background: linear-gradient(135deg, #ddb833 25%, transparent 25%) 0px 0, linear-gradient(225deg, #ddb833 25%, transparent 25%) 0px 50px, linear-gradient(315deg, #ddb833 25%, transparent 25%) 0 -50px, linear-gradient(45deg, #ddb833 25%, transparent 25%);
+  background-size: 20px 20px;
+  width: 100px;
+  height: 100px;
+}
+
+/*波浪背景 */
+/*彈跳盒子 */
+/* line 79, ../sass/cssimg.sass */
+.anibox {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  transform: translate(-40px, -20px);
+}
+/* line 84, ../sass/cssimg.sass */
+.anibox::before {
+  top: 0px;
+  width: 50px;
+  height: 50px;
+  transform: translate(50px, 20px) rotate(45deg);
+  background: #c93852;
+  border-radius: 10px;
+  animation: 0.7s aniball infinite;
+  z-index: 2;
+}
+/* line 93, ../sass/cssimg.sass */
+.anibox::after {
+  top: 0;
+  width: 42px;
+  height: 6px;
+  background: #eaeaea;
+  border-radius: 100%;
+  transform: translate(55px, 132px);
+  animation: 0.7s ballShadow infinite;
+}
+
+@keyframes aniball {
+  0% {
+    top: 0px;
+    transform: translate(50px, 20px) rotate(90deg);
+  }
+  25% {
+    border-bottom-right-radius: 10px;
+  }
+  50% {
+    top: 70px;
+    border-bottom-right-radius: 35px;
+    transform: translate(50px, 20px) rotate(45deg);
+  }
+  75% {
+    border-bottom-right-radius: 10px;
+  }
+  100% {
+    top: 0px;
+    transform: translate(50px, 20px) rotate(0deg);
+  }
+}
+@keyframes ballShadow {
+  0% {
+    transform: translate(55px, 132px);
+  }
+  50% {
+    width: 50px;
+    height: 10px;
+    transform: translate(52.5px, 128px);
+  }
+  100% {
+    transform: translate(55px, 132px);
+    width: 42px;
+  }
+}
+/*彈跳盒子 */
+/*彩色條紋 */
+/* line 129, ../sass/cssimg.sass */
+.rainbow {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(to bottom right, red, orange, yellow, green, blue, indigo, violet);
+}
+
+/* line 134, ../sass/cssimg.sass */
+.rainbow-2 {
+  width: 100px;
+  height: 100px;
+  background: repeating-linear-gradient(45deg, #000, #000 10px, green 20px, white 30px, purple 40px, purple 40px);
+}
+
+/*彩色條紋 */
+/*雲朵下雨 */
+/* line 141, ../sass/cssimg.sass */
+.cloudy-rain {
+  margin: 49px;
+  width: 2px;
+  height: 2px;
+  background: #FFF;
+  border-radius: 100%;
+  transform: translate(-30px, -20px);
+  box-shadow: 0 0 0 15px #FFF, 10px 10px 0 10px #FFF, 10px -15px 0 15px #FFF, 25px -15px 0 10px #FFF, 40px -15px 0 12px #FFF, 50px -5px 0 15px #FFF, 30px 0px 0 15px #FFF, 45px 5px 0 12px #FFF, 14px -25px 0 15px rgba(145, 143, 144, 0.9), 29px -25px 0 10px rgba(145, 143, 144, 0.9), 44px -25px 0 12px rgba(145, 143, 144, 0.9), 52px -15px 0 15px rgba(145, 143, 144, 0.9);
+}
+/* line 149, ../sass/cssimg.sass */
+.cloudy-rain::before {
+  width: 2px;
+  height: 8px;
+  background: transparent;
+  border-radius: 100%;
+  animation: anirain 0.8s infinite linear;
+}
+
+@keyframes anirain {
+  0% {
+    box-shadow: transparent -10px 30px, transparent 40px 40px, rgba(0, 0, 0, 0.3) 20px 75px, rgba(0, 0, 0, 0.3) 55px 50px, rgba(0, 0, 0, 0.3) 38px 100px, rgba(0, 0, 0, 0.3) 12px 95px, rgba(0, 0, 0, 0.3) 1px 45px, rgba(0, 0, 0, 0.3) 30px 35px;
+  }
+  25% {
+    box-shadow: rgba(0, 0, 0, 0.3) -10px 45px, rgba(0, 0, 0, 0.3) 40px 60px, rgba(0, 0, 0, 0.3) 20px 90px, rgba(0, 0, 0, 0.3) 55px 65px, transparent 38px 120px, transparent 12px 120px, rgba(0, 0, 0, 0.3) 1px 70px, rgba(0, 0, 0, 0.3) 30px 60px;
+  }
+  26% {
+    box-shadow: rgba(0, 0, 0, 0.3) -10px 45px, rgba(0, 0, 0, 0.3) 40px 60px, rgba(0, 0, 0, 0.3) 20px 90px, rgba(0, 0, 0, 0.3) 55px 65px, transparent 38px 40px, transparent 12px 20px, rgba(0, 0, 0, 0.3) 1px 70px, rgba(0, 0, 0, 0.3) 30px 60px;
+  }
+  50% {
+    box-shadow: rgba(0, 0, 0, 0.3) -10px 70px, rgba(0, 0, 0, 0.3) 40px 80px, transparent 20px 100px, rgba(0, 0, 0, 0.3) 55px 80px, rgba(0, 0, 0, 0.3) 38px 60px, rgba(0, 0, 0, 0.3) 12px 45px, rgba(0, 0, 0, 0.3) 1px 95px, rgba(0, 0, 0, 0.3) 30px 85px;
+  }
+  51% {
+    box-shadow: rgba(0, 0, 0, 0.3) -10px 70px, rgba(0, 0, 0, 0.3) 40px 80px, transparent 20px 45px, rgba(0, 0, 0, 0.3) 55px 80px, rgba(0, 0, 0, 0.3) 38px 60px, rgba(0, 0, 0, 0.3) 12px 45px, rgba(0, 0, 0, 0.3) 1px 95px, rgba(0, 0, 0, 0.3) 30px 85px;
+  }
+  75% {
+    box-shadow: rgba(0, 0, 0, 0.3) -10px 95px, rgba(0, 0, 0, 0.3) 40px 100px, rgba(0, 0, 0, 0.3) 20px 60px, transparent 55px 95px, rgba(0, 0, 0, 0.3) 38px 80px, rgba(0, 0, 0, 0.3) 12px 70px, transparent 1px 120px, transparent 30px 110px;
+  }
+  76% {
+    box-shadow: rgba(0, 0, 0, 0.3) -10px 95px, rgba(0, 0, 0, 0.3) 40px 100px, rgba(0, 0, 0, 0.3) 20px 60px, transparent 55px 35px, rgba(0, 0, 0, 0.3) 38px 80px, rgba(0, 0, 0, 0.3) 12px 70px, transparent 1px 25px, transparent 30px 15px;
+  }
+  100% {
+    box-shadow: transparent -10px 120px, transparent 40px 120px, rgba(0, 0, 0, 0.3) 20px 75px, rgba(0, 0, 0, 0.3) 55px 50px, rgba(0, 0, 0, 0.3) 38px 100px, rgba(0, 0, 0, 0.3) 12px 95px, rgba(0, 0, 0, 0.3) 1px 45px, rgba(0, 0, 0, 0.3) 30px 35px;
+  }
+}
+/*雲朵下雨 */
+/*Google */
+/* line 175, ../sass/cssimg.sass */
+.google {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background: radial-gradient(#1064d1 15px, #f0f0f0 15px, #f0f0f0 20px, rgba(0, 0, 0, 0) 20px), linear-gradient(300deg, #d8cb11 28px, transparent 0) -23px, linear-gradient(60deg, #2ad624 48px, transparent 0), linear-gradient(180deg, #d62924 30px, transparent 0), linear-gradient(120deg, #d62924 55px, transparent 0), linear-gradient(300deg, #d8cb11 48px, transparent 0), linear-gradient(240deg, #d8cb11 55px, transparent 0), linear-gradient(0deg, #2ad624 48px, transparent 0);
+}
+
+/*Google */
+/*IE */
+/* line 183, ../sass/cssimg.sass */
+.ie {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background: radial-gradient(#35a3cc 25px, rgba(0, 0, 0, 0) 0%), radial-gradient(#1465ce 50px, rgba(0, 0, 0, 0) 0%);
+}
+/* line 188, ../sass/cssimg.sass */
+.ie::before {
+  width: 130px;
+  height: 40px;
+  border-radius: 100%;
+  box-shadow: 0px -6px 0 7px #1465ce, -20px -16px 0 1px #35a3cc;
+  transform: translate(-15px, 30px) rotate(-40deg);
+}
+/* line 194, ../sass/cssimg.sass */
+.ie::after {
+  width: 55px;
+  height: 15px;
+  background: #1465ce;
+  transform: translate(20px, 40px);
+  box-shadow: 25px 15px 0 1px #35a3cc;
+}
+
+/*IE */
+/*風扇 */
+/* line 203, ../sass/cssimg.sass */
+.electricfan {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation: anifan 0.5s infinite linear;
+}
+/* line 208, ../sass/cssimg.sass */
+.electricfan .blade, .electricfan .blade::before, .electricfan .bladeforn4 {
+  position: absolute;
+  width: 50px;
+  height: 40px;
+  background: orange;
+  border-radius: 60% 100% 0 0;
+}
+/* line 214, ../sass/cssimg.sass */
+.electricfan .blade::before, .electricfan .bladeforn4::before {
+  background: #35a3cc;
+  transform: translate(20px, 15px) rotate(10deg);
+}
+/* line 218, ../sass/cssimg.sass */
+.electricfan .n-1 {
+  transform: translate(35px, -21px);
+}
+/* line 220, ../sass/cssimg.sass */
+.electricfan .n-2 {
+  transform: translate(-25px, 18px) rotate(-90deg);
+}
+/* line 222, ../sass/cssimg.sass */
+.electricfan .n-3 {
+  transform: translate(15px, 78px) rotate(180deg);
+}
+/* line 224, ../sass/cssimg.sass */
+.electricfan .n-4 {
+  transform: translate(75px, 38px) rotate(90deg);
+}
+/* line 226, ../sass/cssimg.sass */
+.electricfan .bladeforn4 {
+  background: #35a3cc;
+  transform: translate(55px, -6px) rotate(10deg);
+}
+/* line 230, ../sass/cssimg.sass */
+.electricfan .fanmid {
+  position: absolute;
+  width: 68px;
+  height: 68px;
+  background: orange;
+  border-radius: 100%;
+  transform: translate(16px, 16px);
+}
+/* line 237, ../sass/cssimg.sass */
+.electricfan .fanmid::before {
+  width: 20px;
+  height: 20px;
+  background: #FFF;
+  transform: translate(24px, 24px);
+  border-radius: 100%;
+}
+/* line 243, ../sass/cssimg.sass */
+.electricfan .fanmid::after {
+  width: 10px;
+  height: 10px;
+  background: orange;
+  border-radius: 100%;
+  transform: translate(29px, 29px);
+}
+
+@keyframes anifan {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*風扇 */
+/*星星 */
+/* line 257, ../sass/cssimg.sass */
+.star {
+  margin: 30px 38px;
+  width: 0;
+  height: 0;
+  border: solid;
+  border-width: 0px 12px 40px 12px;
+  border-color: transparent transparent red transparent;
+  transform: translate(0px, -50px);
+  filter: drop-shadow(5px 5px 1px #050505);
+}
+/* line 266, ../sass/cssimg.sass */
+.star::before, .star::after {
+  width: 0;
+  height: 0;
+  border: solid;
+  border-width: 0px 50px 36px 50px;
+  border-color: transparent transparent red transparent;
+  transform: translate(-50px, 32px) rotate(-38deg);
+}
+/* line 273, ../sass/cssimg.sass */
+.star::after {
+  transform: translate(-50px, 32px) rotate(38deg);
+}
+
+/*星星 */
+/*隊長盾牌 */
+/* line 279, ../sass/cssimg.sass */
+.captainShield {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 0.3) 50%, rgba(255, 255, 255, 0) 70%), linear-gradient(0deg, rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 0.2) 50%, rgba(255, 255, 255, 0) 60%), linear-gradient(135deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 70%), linear-gradient(45deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0) 70%), radial-gradient(#0101c4 14px, #ce0021 14px, #ce0021 26px, #b5adae 26px, #b5adae 38px, #ce0021 38px, #ce0021 49px, #000000 54px);
+  position: relative;
+  box-shadow: 0px 2px 5px 1px #b7001d;
+}
+/* line 286, ../sass/cssimg.sass */
+.captainShield::before {
+  content: "★";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 100px;
+  font-size: 34px;
+  color: #FFF;
+}
+
+/*隊長盾牌 */
